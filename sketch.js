@@ -37,13 +37,13 @@ function draw() {
   noStroke();
   textSize(26.4);
   textAlign(CENTER, TOP);
-  text("LIGHT DETECTED", width / 2, 20);
+  text("PHOTONIC FATALITY", width / 2, 20);
   
-  // Display current value as percentage
+  // Subtitle with light detected percentage
   textSize(15.4);
   let currentDisplayValue = dataPoints[dataPoints.length - 1];
   if (currentDisplayValue !== null) {
-    text(nf(currentDisplayValue, 1, 2) + "%", width / 2, 50);
+    text("light detected: " + nf(currentDisplayValue, 1, 2) + "%", width / 2, 55);
   }
   
   // Update data points - add new point on the right
@@ -140,7 +140,7 @@ function draw() {
     noStroke();
     textSize(15.4);
     textAlign(CENTER, TOP);
-    text("Photonic Fatality", barX + barWidth / 2, barY - 25);
+    text("Plant Life", barX + barWidth / 2, barY - 25);
   }
 }
 
