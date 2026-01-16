@@ -18,6 +18,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   startTime = millis();
+  textFont('Courier New');
   
   // Initialize with empty points
   for (let i = 0; i < maxPoints; i++) {
@@ -35,15 +36,15 @@ function draw() {
   // Title
   fill(255);
   noStroke();
-  textSize(26.4);
+  textSize(30);
   textAlign(CENTER, TOP);
   text("PHOTONIC FATALITY", width / 2, 20);
   
   // Subtitle with light detected percentage
-  textSize(15.4);
+  textSize(20);
   let currentDisplayValue = dataPoints[dataPoints.length - 1];
   if (currentDisplayValue !== null) {
-    text("light detected: " + nf(currentDisplayValue, 1, 2) + "%", width / 2, 55);
+    text("Light detected: " + nf(currentDisplayValue, 1, 2) + "%", width / 2, 55);
   }
   
   // Update data points - add new point on the right
@@ -138,7 +139,7 @@ function draw() {
     // Label
     fill(255);
     noStroke();
-    textSize(15.4);
+    textSize(20);
     textAlign(CENTER, TOP);
     text("Plant Life", barX + barWidth / 2, barY - 25);
   }
