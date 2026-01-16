@@ -140,7 +140,7 @@ function draw() {
     noStroke();
     textSize(15.4);
     textAlign(CENTER, TOP);
-    text("Plant life", barX + barWidth / 2, barY - 25);
+    text("Photonic Fatality", barX + barWidth / 2, barY - 25);
   }
 }
 
